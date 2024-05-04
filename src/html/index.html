@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Brain Boost Ninja</title>
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <link rel="stylesheet" href="/src/css/output.css">
     <script src="/src/js/alpine.js"></script>
@@ -11,15 +12,15 @@
 </head>
 
 <body x-data>
-    <header class="p-4 mx-auto bg-red-100 container">
-        <div class="prose bg-blue-400 flex gap-4">
+    <header class="mx-auto container">
+        <div class="prose flex gap-4">
             <template x-for="menuItem in alpine.menu">
-                <a class="bg-red-400 p-2" x-text="menuItem.label" x-bind:href="menuItem.url"></a>
+                <a class="p-2" x-text="menuItem.label" x-bind:href="menuItem.url"></a>
             </template>
         </div>
     </header>
     <main class="container mx-auto">
-        <section class="container bg-yellow-200">
+        <section class="container">
             <!-- Download Button -->
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 <a href="/assets/files/downloadable.zip" download="downloadable content.zip">Download Zip</a>
