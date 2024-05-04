@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="/src/css/output.css">
+    <script src="/src/js/alpine.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="/src/js/main.js" defer></script>
+</head>
+
+<body x-data>
+    <header class="p-4 mx-auto bg-red-100 container">
+        <div class="prose bg-blue-400 flex gap-4">
+            <template x-for="menuItem in alpine.menu">
+                <a class="bg-red-400 p-2" x-text="menuItem.label" x-bind:href="menuItem.url"></a>
+            </template>
+        </div>
+    </header>
+    <main class="container mx-auto">
+        <section class="container bg-yellow-200">
+            <!-- Download Button -->
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <a href="/assets/files/downloadable.zip" download="downloadable content.zip">Download Zip</a>
+            </button>
+        </section>
+    </main>
+</body>
+
+</html>

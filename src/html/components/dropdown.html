@@ -1,0 +1,26 @@
+<!-- dropdownComponent.html -->
+<div x-data="dropdown()" x-init="init()">
+    <button x-on:click="open">Open</button>
+    <div x-show="isOpen" x-text="content"></div>
+</div>
+
+<script>
+    function dropdown() {
+        return {
+            show: false,
+            content: 'Default content', // Default content if not overridden
+            init() {
+                this.content = this.$el.getAttribute('content') || this.content;
+            },
+            open() {
+                this.show = true;
+            },
+            close() {
+                this.show = false;
+            },
+            isOpen() {
+                return this.show;
+            }
+        }
+    }
+</script>
