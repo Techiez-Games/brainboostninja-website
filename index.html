@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Brain Boost Ninja</title>
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
-    <link rel="stylesheet" href="/src/css/output.css">
-    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="src/css/output.css">
+    <link rel="stylesheet" href="src/css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,15 +17,15 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="/src/js/alpine.js"></script>
+    <script src="src/js/alpine.js"></script>
     <script src="//unpkg.com/alpinejs"></script>
-    <script src="/src/js/main.js"></script>
+    <script src="src/js/main.js"></script>
 </head>
 
 <body class="font-poppins" x-data>
     <header class="relative z-10 bg-brand-gold">
         <section class="s flex justify-between py-5">
-            <img class="w-36" src="/assets/images/Logo.svg" alt="Logo">
+            <img class="w-36" src="assets/images/Logo.svg" alt="Logo">
             <div class="flex gap-12 font-semibold text-brand-dark1 items-center">
                 <template x-for="menuItem in alpine.menu">
                     <a class="p-2 h-fit" x-text="menuItem.label" x-bind:href="menuItem.url"></a>
@@ -115,7 +115,7 @@
             <section class="s">
                 <div class="grid grid-cols-2 items-center gap-20">
                     <div>
-                        <img class="w-[23.6rem]" src="/assets/images/game logo.png" alt="Typing Ninja Logo">
+                        <img class="w-[23.6rem]" src="assets/images/game logo.png" alt="Typing Ninja Logo">
                         <p class="font-mulish text-xl mt-12">"Typing Ninja" is a thrilling and educational game that
                             blends the intensity of
                             ninja
@@ -141,7 +141,7 @@
                     <div class="video-wrapper">
                         <div></div>
                         <div></div>
-                        <video class="hero-video" src="/assets/videos/test video.mp4" controls autoplay muted loop>
+                        <video class="hero-video" src="assets/videos/test video.mp4" controls autoplay muted loop>
                             <source src="movie.mp4" type="video/mp4">
                             <source src="movie.ogg" type="video/ogg">
                             Your browser does not support the video tag.
@@ -183,7 +183,7 @@
                         social@brainboostninja.com</p>
                     <div class="mt-10">
                         <a class="mt-10 px-12 py-4 bg-brand-pink text-white rounded-2xl font-semibold"
-                            href="/assets/files/downloadable.zip" download="downloadable content.zip">
+                            href="assets/files/downloadable.zip" download="downloadable content.zip">
                             <i class="fa-solid fa-scroll mr-2"></i>
                             <span>
                                 Download Press Kit
@@ -233,8 +233,7 @@
                 <div class="flex gap-4">
                     <template x-for="social in alpine.socials">
                         <a class="aspect-square w-8 h-8 flex justify-center items-center p-2 rounded-full bg-brand-dark1"
-                            x-bind:href="social.url"
-                            target="_blank">
+                            x-bind:href="social.url" target="_blank">
                             <i x-bind:class="social.icon"></i> <!-- Adjust `text-xl` as needed -->
                         </a>
 
