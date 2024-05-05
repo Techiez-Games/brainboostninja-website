@@ -3,14 +3,17 @@ window.alpine = {
     {
       label: "Typing Ninja",
       url: "/home",
+      sectionId: "#s-game"
     },
     {
       label: "PowerUps",
       url: "/ninjaboosting",
+      sectionId: "#s-powerup"
     },
     {
       label: "Subscribe",
       url: "/ninjaboosting",
+      sectionId: "#s-subscribe"
     },
   ],
 

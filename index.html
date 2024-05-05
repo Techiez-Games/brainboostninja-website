@@ -28,9 +28,8 @@
             <img class="w-36" src="assets/images/Logo.svg" alt="Logo">
             <div class="flex gap-12 font-semibold text-brand-dark1 items-center">
                 <template x-for="menuItem in alpine.menu">
-                    <a class="p-2 h-fit" x-text="menuItem.label" x-bind:href="menuItem.url"></a>
+                    <a class="max-lg:hidden p-2 h-fit" x-text="menuItem.label" x-bind:href="menuItem.sectionId"></a>
                 </template>
-
                 <a class="px-12 py-4 bg-brand-pink text-white rounded-2xl"
                     href="https://store.steampowered.com/app/2862700/Typing_Ninja/">
                     <i class="fa-brands fa-steam mr-2"></i>
@@ -113,23 +112,22 @@
                 </defs>
             </svg>
             <section class="s">
-                <div class="grid grid-cols-2 items-center gap-20">
+                <div class="grid max-xl:grid-rows-2 xl:grid-cols-2 items-center gap-20 max-md:gap-6">
                     <div>
-                        <img class="w-[23.6rem]" src="assets/images/game logo.png" alt="Typing Ninja Logo">
-                        <p class="font-mulish text-xl mt-12">"Typing Ninja" is a thrilling and educational game that
-                            blends the intensity of
-                            ninja
-                            training
-                            with the essential skill of typing.</p>
-                        <div class="flex gap-4 mt-10">
-                            <a class="px-12 py-4 bg-brand-pink text-white rounded-2xl font-semibold"
+                        <img class="w-[23.6rem] max-xl:mx-auto" src="assets/images/game logo.png"
+                            alt="Typing Ninja Logo">
+                        <p class="font-mulish text-xl mt-12 max-xl:text-center">"Typing Ninja" is a thrilling and
+                            educational game that
+                            blends the intensity of ninja training with the essential skill of typing.</p>
+                        <div class="flex gap-4 mt-10 max-xl:justify-center max-md:flex-col max-md:items-center">
+                            <a class="px-12 py-4 w-fit bg-brand-pink text-white rounded-2xl font-semibold"
                                 href="https://store.steampowered.com/app/2862700/Typing_Ninja/">
                                 <i class="fa-brands fa-steam mr-2"></i>
                                 <span>
                                     Add to Wishlist
                                 </span>
                             </a>
-                            <a class="px-12 py-4 text-brand-pink border border-brand-pink bg-white rounded-2xl font-semibold"
+                            <a class="px-12 py-4 w-fit text-brand-pink border border-brand-pink bg-white rounded-2xl font-semibold"
                                 href="https://store.steampowered.com/app/2862700/Typing_Ninja/">
                                 <i class="fa-solid fa-rocket mr-2"></i>
                                 <span>
@@ -150,21 +148,16 @@
                 </div>
             </section>
         </div>
-        <div>
+        <div id="s-game">
             <section class="s">
                 <div class="text-brand-dark1 text-center">
                     <h1 class="text-4xl font-bold">Meet the Typing Ninja</h1>
-                    <p class="mt-5 font-mulish">Players embark on an immersive journey through 8
-                        meticulously
-                        crafted levels in
-                        Story Mode, each
-                        unfolding a chapter of our ninja protagonist's quest to transition from a traditional warrior to
-                        a
-                        cyber security expert. Facing the modern challenge of mastering the keyboard, our hero's journey
-                        is
-                        one of determination, skill, and swift adaptation.</p>
+                    <p class="mt-5 font-mulish">Players embark on an immersive journey through 8 meticulously crafted
+                        levels in Story Mode, each unfolding a chapter of our ninja protagonist's quest to transition
+                        from a traditional warrior to a cyber security expert. Facing the modern challenge of mastering
+                        the keyboard, our hero's journey is one of determination, skill, and swift adaptation.</p>
                 </div>
-                <div class="mt-14 grid grid-cols-3 gap-x-7 gap-y-14">
+                <div class="mt-14 grid grid-cols-3 max-xl:grid-cols-2 max-md:grid-cols-1 gap-x-7 gap-y-14">
                     <template x-for="i in 6">
                         <div class="w-full aspect-video bg-brand-pink rounded-3xl">
 
@@ -193,7 +186,7 @@
                 </div>
             </section>
         </div>
-        <div>
+        <div id="s-powerup">
             <section class="s">
                 <div class="text-brand-dark1 text-center">
                     <h1 class="text-4xl font-bold">Typing Ninja PowerUps</h1>
@@ -203,7 +196,7 @@
                 <div class="mt-14 flex flex-wrap justify-center gap-x-7 gap-y-14">
                     <template x-for="card in alpine.powerupCards">
                         <div
-                            class="relative w-[23rem] overflow-hidden text-center rounded-[20px] border border-brand-lightpink bg-white card-shadow">
+                            class="relative w-[23rem] max-md:w-[80%] overflow-hidden text-center rounded-[20px] border border-brand-lightpink bg-white card-shadow">
                             <img class="absolute top-2 left-2 z-10 w-28" x-bind:src="card.badge" x-bind:alt="card.name">
                             <img loading="lazy" x-bind:src="card.gif"></img>
                             <div class="px-10 py-7">
@@ -215,15 +208,62 @@
                 </div>
             </section>
         </div>
-        <div>
+        <div id="s-subscribe">
             <section class="s">
                 <div class="rounded-[20px] border border-brand-lightpink bg-white">
-                    <img class="absolute top-2 left-2 z-10 w-28" x-bind:src="card.badge" x-bind:alt="card.name">
-                    <img loading="lazy" x-bind:src="card.gif"></img>
-                    <div class="px-10 py-7">
-                        <h2 class="text-[1.75rem] font-semibold" x-text="card.name"></h2>
-                        <p class="mt-6 font-mulish" x-text="card.description"></p>
+                    <div id="mc_embed_shell">
+                        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet"
+                            type="text/css">
+                        <style type="text/css">
+
+                            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                             We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                        <div id="mc_embed_signup">
+                            <form
+                                action="https://gmail.us22.list-manage.com/subscribe/post?u=552f9257642d94afc9a1acf26&amp;id=f8852f6ad4&amp;f_id=0067cbe1f0"
+                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                class="validate" target="_blank">
+                                <div id="mc_embed_signup_scroll">
+                                    <h2>Subscribe</h2>
+                                    <div class="indicates-required"><span class="asterisk">*</span> indicates required
+                                    </div>
+                                    <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
+                                                class="asterisk">*</span></label><input type="email" name="EMAIL"
+                                            class="required email" id="mce-EMAIL" required="" value=""></div>
+                                    <div id="mce-responses" class="clear foot">
+                                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                                    </div>
+                                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                        /* real people should not fill this in and expect good things - do not remove
+                                        this or risk form bot signups */
+                                        <input type="text" name="b_552f9257642d94afc9a1acf26_f8852f6ad4" tabindex="-1"
+                                            value="">
+                                    </div>
+                                    <div class="optionalParent">
+                                        <div class="clear foot">
+                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe"
+                                                class="button" value="Subscribe">
+                                            <p style="margin: 0px auto;"><a href="http://eepurl.com/iPqypY"
+                                                    title="Mailchimp - email marketing made easy and fun"><span
+                                                        style="display: inline-block; background-color: transparent; border-radius: 4px;"><img
+                                                            class="refferal_badge"
+                                                            src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                                                            alt="Intuit Mailchimp"
+                                                            style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <script type="text/javascript"
+                            src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                        <script
+                            type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
                     </div>
+
                 </div>
             </section>
         </div>
