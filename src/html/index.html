@@ -6,26 +6,212 @@
     <title>Brain Boost Ninja</title>
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <link rel="stylesheet" href="/src/css/output.css">
+    <link rel="stylesheet" href="/src/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="/src/js/alpine.js"></script>
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="/src/js/main.js" defer></script>
+    <script src="//unpkg.com/alpinejs"></script>
+    <script src="/src/js/main.js"></script>
 </head>
 
-<body x-data>
-    <header class="mx-auto container">
-        <div class="prose flex gap-4">
-            <template x-for="menuItem in alpine.menu">
-                <a class="p-2" x-text="menuItem.label" x-bind:href="menuItem.url"></a>
-            </template>
-        </div>
+<body class="font-poppins" x-data>
+    <header class="relative z-10 bg-brand-gold">
+        <section class="s flex justify-between py-5">
+            <img class="w-36" src="/assets/images/Logo.svg" alt="Logo">
+            <div class="flex gap-12 font-semibold text-brand-dark1 items-center">
+                <template x-for="menuItem in alpine.menu">
+                    <a class="p-2 h-fit" x-text="menuItem.label" x-bind:href="menuItem.url"></a>
+                </template>
+
+                <a class="px-12 py-4 bg-brand-pink text-white rounded-2xl"
+                    href="https://store.steampowered.com/app/2862700/Typing_Ninja/">
+                    <i class="fa-brands fa-steam mr-2"></i>
+                    <span>
+                        Add to Wishlist
+                    </span>
+                </a>
+            </div>
+        </section>
     </header>
-    <main class="container mx-auto">
-        <section class="container">
-            <!-- Download Button -->
+    <main>
+        <div class="hero relative z-10 bg-brand-gold">
+            <svg class="hero-shine" viewBox="0 0 1280 650" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_542_719)">
+                    <path d="M6.10352e-05 341.386V301.13L805.156 321.258L6.10352e-05 341.386Z" />
+                    <path d="M-0.000244141 254.224V213.516L805.292 318.571L-0.000244141 254.224Z" />
+                    <path d="M6.10352e-05 165.583V123.475L805.721 315.907L6.10352e-05 165.583Z" />
+                    <path d="M-0.00012207 73.3865V28.8065L806.42 313.299L-0.00012207 73.3865Z" />
+                    <path d="M6.10352e-05 -24.7595V-73.1439L807.38 310.782L6.10352e-05 -24.7595Z" />
+                    <path d="M0 -131.892V-155H50.4161L808.611 308.388L0 -131.892Z" />
+                    <path d="M140.829 -155H207.648L810.067 306.131L140.829 -155Z" />
+                    <path d="M275.595 -155H326.903L811.771 304.031L275.595 -155Z" />
+                    <path d="M380.909 -155H422.317L813.679 302.123L380.909 -155Z" />
+                    <path d="M467.156 -155H501.96L815.768 300.43L467.156 -155Z" />
+                    <path d="M540.579 -155H570.844L818.025 298.962L540.579 -155Z" />
+                    <path d="M605.14 -155H632.267L820.43 297.743L605.14 -155Z" />
+                    <path d="M663.571 -155H688.542L822.948 296.772L663.571 -155Z" />
+                    <path d="M717.814 -155H741.397L825.544 296.083L717.814 -155Z" />
+                    <path d="M769.427 -155H792.208L828.208 295.654L769.427 -155Z" />
+                    <path d="M819.64 -155H842.161L830.895 295.519L819.64 -155Z" />
+                    <path d="M869.593 -155H892.374L833.593 295.654L869.593 -155Z" />
+                    <path d="M920.404 -155H943.975L836.257 296.083L920.404 -155Z" />
+                    <path d="M973.259 -155H998.23L838.853 296.772L973.259 -155Z" />
+                    <path d="M1029.53 -155H1056.66L841.371 297.743L1029.53 -155Z" />
+                    <path d="M1090.95 -155H1121.22L843.775 298.962L1090.95 -155Z" />
+                    <path d="M1159.83 -155H1194.63L846.033 300.43L1159.83 -155Z" />
+                    <path d="M1239.48 -155H1280V-154.063L848.122 302.123L1239.48 -155Z" />
+                    <path d="M1280 -103.026V-64.0789L850.029 304.031L1280 -103.026Z" />
+                    <path d="M1280 -21.7002V11.0377L851.723 306.131L1280 -21.7002Z" />
+                    <path d="M1280 47.5349V75.9943L853.19 308.388L1280 47.5349Z" />
+                    <path d="M1280 108.416V133.918L854.421 310.782L1280 108.416Z" />
+                    <path d="M1280 163.506V186.976L855.38 313.299L1280 163.506Z" />
+                    <path d="M1280 214.668V236.816L856.08 315.907L1280 214.668Z" />
+                    <path d="M1280 263.323V284.727L856.498 318.571L1280 263.323Z" />
+                    <path d="M1280 310.669V331.847L856.645 321.258L1280 310.669Z" />
+                    <path d="M1280 357.789V379.193L856.498 323.956L1280 357.789Z" />
+                    <path d="M1280 405.699V427.859L856.08 326.609L1280 405.699Z" />
+                    <path d="M1280 455.54V479.009L855.38 329.216L1280 455.54Z" />
+                    <path d="M1280 508.598V534.099L854.421 331.734L1280 508.598Z" />
+                    <path d="M1280 566.521V594.981L853.19 334.127L1280 566.521Z" />
+                    <path d="M1280 631.489V664.216L851.723 336.396L1280 631.489Z" />
+                    <path d="M1280 706.594V745.541L850.029 338.485L1280 706.594Z" />
+                    <path d="M1280 796.578V805H1245.9L848.122 340.392L1280 796.578Z" />
+                    <path d="M1200.37 805H1165L846.033 342.086L1200.37 805Z" />
+                    <path d="M1125.79 805H1095.03L843.775 343.553L1125.79 805Z" />
+                    <path d="M1060.22 805H1032.64L841.371 344.773L1060.22 805Z" />
+                    <path d="M1000.87 805H975.483L838.853 345.743L1000.87 805Z" />
+                    <path d="M945.771 805H921.804L836.257 346.443L945.771 805Z" />
+                    <path d="M893.356 805H870.191L833.593 346.861L893.356 805Z" />
+                    <path d="M842.353 805H819.448L830.895 347.008L842.353 805Z" />
+                    <path d="M791.609 805H768.445L828.208 346.861L791.609 805Z" />
+                    <path d="M739.997 805H716.031L825.544 346.443L739.997 805Z" />
+                    <path d="M686.318 805H660.93L822.948 345.743L686.318 805Z" />
+                    <path d="M629.163 805H601.584L820.43 344.773L629.163 805Z" />
+                    <path d="M566.78 805H536.007L818.025 343.553L566.78 805Z" />
+                    <path d="M496.812 805H461.433L815.768 342.086L496.812 805Z" />
+                    <path d="M415.905 805H373.82L813.679 340.392L415.905 805Z" />
+                    <path d="M319.001 805H266.858L811.771 338.485L319.001 805Z" />
+                    <path d="M197.871 805H129.969L810.067 336.396L197.871 805Z" />
+                    <path d="M808.611 334.127L38.179 805H0V774.418L808.611 334.127Z" />
+                    <path d="M6.10352e-05 715.659V667.286L807.38 331.734L6.10352e-05 715.659Z" />
+                    <path d="M-0.00012207 613.709V569.129L806.42 329.216L-0.00012207 613.709Z" />
+                    <path d="M6.10352e-05 519.04V476.932L805.721 326.609L6.10352e-05 519.04Z" />
+                    <path d="M-0.000244141 428.999V388.291L805.292 323.956L-0.000244141 428.999Z" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_547_2749">
+                        <rect width="100%" height="100%" transform="matrix(-1 0 0 1 1280 -155)" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <section class="s">
+                <div class="grid grid-cols-2 items-center gap-20">
+                    <div>
+                        <img class="w-[23.6rem]" src="/assets/images/game logo.png" alt="Typing Ninja Logo">
+                        <p class="font-mulish text-xl mt-12">"Typing Ninja" is a thrilling and educational game that
+                            blends the intensity of
+                            ninja
+                            training
+                            with the essential skill of typing.</p>
+                        <div class="flex gap-4 mt-10">
+                            <a class="px-12 py-4 bg-brand-pink text-white rounded-2xl font-semibold"
+                                href="https://store.steampowered.com/app/2862700/Typing_Ninja/">
+                                <i class="fa-brands fa-steam mr-2"></i>
+                                <span>
+                                    Add to Wishlist
+                                </span>
+                            </a>
+                            <a class="px-12 py-4 text-brand-pink border border-brand-pink bg-white rounded-2xl font-semibold"
+                                href="https://store.steampowered.com/app/2862700/Typing_Ninja/">
+                                <i class="fa-solid fa-rocket mr-2"></i>
+                                <span>
+                                    Subscribe
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="video-wrapper">
+                        <div></div>
+                        <div></div>
+                        <video class="hero-video" src="/assets/videos/test video.mp4" controls autoplay muted loop>
+                            <source src="movie.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+            <section class="s">
+                <div class="text-brand-dark1 text-center">
+                    <h1 class="text-4xl font-bold">Meet the Typing Ninja</h1>
+                    <p class="mt-5 font-mulish">Players embark on an immersive journey through 8
+                        meticulously
+                        crafted levels in
+                        Story Mode, each
+                        unfolding a chapter of our ninja protagonist's quest to transition from a traditional warrior to
+                        a
+                        cyber security expert. Facing the modern challenge of mastering the keyboard, our hero's journey
+                        is
+                        one of determination, skill, and swift adaptation.</p>
+                </div>
+                <div class="mt-14 grid grid-cols-3 gap-x-7 gap-y-14">
+                    <template x-for="i in 6">
+                        <div class="w-full aspect-video bg-brand-pink rounded-3xl">
+
+                        </div>
+                    </template>
+                </div>
+            </section>
+        </div>
+        <div>
+            <section class="s">
+                <div class="text-brand-dark1 text-center">
+                    <h1 class="text-4xl font-bold">Typing Ninja PowerUps</h1>
+                    <p class="mt-5 font-mulish"> Using power-ups strategically can help you achieve higher scores and
+                        progress further in the game.</p>
+                </div>
+                <div class="mt-14 grid grid-cols-3 gap-x-7 gap-y-14">
+                    <template x-for="card in alpine.powerupCards">
+                        <div
+                            class="px-10 py-7 w-full aspect-video rounded-[20px] border border-brand-lightpink bg-white card-shadow">
+                            <img src="card.icon" x-bind:alt="card.name">
+                            <h2 class="text-[1.75rem] font-semibold" x-text="card.name"></h2>
+                            <p class="mt-6 font-mulish" x-text="card.description"></p>
+                        </div>
+                    </template>
+                </div>
+            </section>
+        </div>
+
+        <div class="bg-brand-dark2">
+            <footer class="s px-14 py-6 font-mulish text-white text-sm">
+                <p>© 2024 brainboostninja.com - All Rights Reserved.</p>
+                <div class="flex gap-2">
+                    <template x-for="social in alpine.socials">
+                        <a class="" x-bind:href="social.url">
+                            adasd
+                            <i x-bind:class="social.icon"></i>
+                        </a>
+                    </template>
+                </div>
+            </footer>
+        </div>
+        <!-- <section class="s">
+            <h1 class="font-poppins">Meet the Typing Ninja</h1>
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 <a href="/assets/files/downloadable.zip" download="downloadable content.zip">Download Zip</a>
             </button>
-        </section>
+        </section> -->
     </main>
 </body>
 

@@ -1,0 +1,102 @@
+.hero-video {
+
+    position: relative;
+    border-radius: 20px;
+    outline: 10px solid #FFDCBC;
+}
+
+.video-wrapper {
+
+    position: relative;
+}
+
+.video-wrapper div {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+
+.video-wrapper div:nth-of-type(1) {
+
+    background: #D7A06F;
+    transform: rotate(-8.3deg) translateX(10px);
+}
+
+.video-wrapper div:nth-of-type(2) {
+
+    background: #D18E52;
+    transform: translateX(-15px) translateY(18px) rotate(1.6deg);
+}
+
+.hero-shine {
+
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.hero-shine g {
+
+    fill: white;
+    opacity: .1;
+}
+
+.s {
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+}
+
+.hero {
+
+    background: linear-gradient(97deg, #FCC695 21.86%, #E8B485 93.3%);
+}
+
+main .s:not(footer) {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+}
+
+.card-shadow {
+    box-shadow: 34.854px 29.626px 48.34px 0px rgba(51, 102, 255, 0.05);
+}
+
+@media (min-width: 640px) {
+    .s {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .s {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .s {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .s {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .s {
+        max-width: 1536px;
+    }
+}
