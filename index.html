@@ -41,7 +41,7 @@
             </div>
         </section>
     </header>
-    <main>
+    <main class="bg-brand-zircon">
         <div class="hero relative z-10 bg-brand-gold">
             <svg class="hero-shine" viewBox="0 0 1280 650" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_542_719)">
@@ -173,6 +173,26 @@
                 </div>
             </section>
         </div>
+        <div class="px-14 py-16">
+            <section class="s bg-brand-lightpink rounded-[20px]">
+                <div class="text-brand-dark1 text-center max-w-3xl mx-auto">
+                    <h1 class="text-4xl font-bold">Press and Streamers</h1>
+                    <p class="mt-5 font-mulish"> Are you a streamer, journalist or influencer? Download our press kit
+                        full of screenshots, gifs and graphics
+                        to use to talk about Typing Ninja. If you'd like to chat, send us an email to
+                        social@brainboostninja.com</p>
+                    <div class="mt-10">
+                        <a class="mt-10 px-12 py-4 bg-brand-pink text-white rounded-2xl font-semibold"
+                            href="/assets/files/downloadable.zip" download="downloadable content.zip">
+                            <i class="fa-solid fa-scroll mr-2"></i>
+                            <span>
+                                Download Press Kit
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
         <div>
             <section class="s">
                 <div class="text-brand-dark1 text-center">
@@ -180,38 +200,48 @@
                     <p class="mt-5 font-mulish"> Using power-ups strategically can help you achieve higher scores and
                         progress further in the game.</p>
                 </div>
-                <div class="mt-14 grid grid-cols-3 gap-x-7 gap-y-14">
+                <div class="mt-14 flex flex-wrap justify-center gap-x-7 gap-y-14">
                     <template x-for="card in alpine.powerupCards">
                         <div
-                            class="px-10 py-7 w-full aspect-video rounded-[20px] border border-brand-lightpink bg-white card-shadow">
-                            <img src="card.icon" x-bind:alt="card.name">
-                            <h2 class="text-[1.75rem] font-semibold" x-text="card.name"></h2>
-                            <p class="mt-6 font-mulish" x-text="card.description"></p>
+                            class="relative w-[23rem] overflow-hidden text-center rounded-[20px] border border-brand-lightpink bg-white card-shadow">
+                            <img class="absolute top-2 left-2 z-10 w-28" x-bind:src="card.badge" x-bind:alt="card.name">
+                            <img loading="lazy" x-bind:src="card.gif"></img>
+                            <div class="px-10 py-7">
+                                <h2 class="text-[1.75rem] font-semibold" x-text="card.name"></h2>
+                                <p class="mt-6 font-mulish" x-text="card.description"></p>
+                            </div>
                         </div>
                     </template>
                 </div>
             </section>
         </div>
-
+        <div>
+            <section class="s">
+                <div class="rounded-[20px] border border-brand-lightpink bg-white">
+                    <img class="absolute top-2 left-2 z-10 w-28" x-bind:src="card.badge" x-bind:alt="card.name">
+                    <img loading="lazy" x-bind:src="card.gif"></img>
+                    <div class="px-10 py-7">
+                        <h2 class="text-[1.75rem] font-semibold" x-text="card.name"></h2>
+                        <p class="mt-6 font-mulish" x-text="card.description"></p>
+                    </div>
+                </div>
+            </section>
+        </div>
         <div class="bg-brand-dark2">
-            <footer class="s px-14 py-6 font-mulish text-white text-sm">
+            <footer class="s flex justify-between items-center px-14 py-6 font-mulish text-white text-sm">
                 <p>© 2024 brainboostninja.com - All Rights Reserved.</p>
-                <div class="flex gap-2">
+                <div class="flex gap-4">
                     <template x-for="social in alpine.socials">
-                        <a class="" x-bind:href="social.url">
-                            adasd
-                            <i x-bind:class="social.icon"></i>
+                        <a class="aspect-square w-8 h-8 flex justify-center items-center p-2 rounded-full bg-brand-dark1"
+                            x-bind:href="social.url"
+                            target="_blank">
+                            <i x-bind:class="social.icon"></i> <!-- Adjust `text-xl` as needed -->
                         </a>
+
                     </template>
                 </div>
             </footer>
         </div>
-        <!-- <section class="s">
-            <h1 class="font-poppins">Meet the Typing Ninja</h1>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                <a href="/assets/files/downloadable.zip" download="downloadable content.zip">Download Zip</a>
-            </button>
-        </section> -->
     </main>
 </body>
 

@@ -18,6 +18,7 @@ module.exports = {
           dark1: "#324253",
           dark2: "#232C38",
           dark3: "#010101",
+          dark4: "#2D2D2D",
           outline: "#FFDCBC",
         },
       },
