@@ -71,6 +71,14 @@ main .s:not(footer) {
     padding-bottom: 6.25rem;
 }
 
+@media (max-width: 500px) {
+
+    .s {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+    }
+}
+
 @media (max-width: 768px) {
 
     main .s:not(footer) {

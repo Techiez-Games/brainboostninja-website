@@ -30,7 +30,7 @@
                 <template x-for="menuItem in alpine.menu">
                     <a class="max-lg:hidden p-2 h-fit" x-text="menuItem.label" x-bind:href="menuItem.sectionId"></a>
                 </template>
-                <a class="px-12 py-4 bg-brand-pink text-white rounded-2xl"
+                <a class="px-12 py-4 max-sm:hidden bg-brand-pink text-white rounded-2xl"
                     href="https://store.steampowered.com/app/2862700/Typing_Ninja/">
                     <i class="fa-brands fa-steam mr-2"></i>
                     <span>
@@ -112,7 +112,7 @@
                 </defs>
             </svg>
             <section class="s">
-                <div class="grid max-xl:grid-rows-2 xl:grid-cols-2 items-center gap-20 max-md:gap-6">
+                <div class="grid max-md:-mb-40 max-sm:-mb-48 max-xs:-mb-[16rem] max-xxs:-mb-72 max-xxxs:-mb-[22rem] max-md:items-start max-xl:grid-rows-2 xl:grid-cols-2 items-center gap-20 max-md:gap-16">
                     <div>
                         <img class="w-[23.6rem] max-xl:mx-auto" src="assets/images/game logo.png"
                             alt="Typing Ninja Logo">
@@ -120,15 +120,15 @@
                             educational game that
                             blends the intensity of ninja training with the essential skill of typing.</p>
                         <div class="flex gap-4 mt-10 max-xl:justify-center max-md:flex-col max-md:items-center">
-                            <a class="px-12 py-4 w-fit bg-brand-pink text-white rounded-2xl font-semibold"
+                            <a target="_blank" class="px-12 max-xxxs:px-8 py-4 w-fit bg-brand-pink text-white rounded-2xl font-semibold"
                                 href="https://store.steampowered.com/app/2862700/Typing_Ninja/">
                                 <i class="fa-brands fa-steam mr-2"></i>
                                 <span>
                                     Add to Wishlist
                                 </span>
                             </a>
-                            <a class="px-12 py-4 w-fit text-brand-pink border border-brand-pink bg-white rounded-2xl font-semibold"
-                                href="https://store.steampowered.com/app/2862700/Typing_Ninja/">
+                            <a target="_blank" class="px-12 max-xxxs:px-8 py-4 w-fit text-brand-pink border border-brand-pink bg-white rounded-2xl font-semibold"
+                                href="https://www.youtube.com/@BrainBoostNinja">
                                 <i class="fa-solid fa-rocket mr-2"></i>
                                 <span>
                                     Subscribe
@@ -139,11 +139,22 @@
                     <div class="video-wrapper">
                         <div></div>
                         <div></div>
-                        <video class="hero-video" src="assets/videos/test video.mp4" controls autoplay muted loop>
-                            <source src="movie.mp4" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
+                        <iframe
+                            class="hero-video w-full aspect-video"
+                            src="https://www.youtube.com/embed/OlGu16kmFsA?controls=0&modestbranding=1&showinfo=0&rel=0&autohide=1" 
+                            title="Typing Ninja - Official Demo Trailer" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            autoplay="1"
+                            muted="0">
+                        </iframe>
+
+                        <!-- <video class="hero-video" src="assets/videos/typing ninja trailer.mp4" controls autoplay muted loop>
+                            <source src="assets/videos/typing ninja trailer.mp4" type="video/mp4">
                             Your browser does not support the video tag.
-                        </video>
+                        </video> -->
                     </div>
                 </div>
             </section>
@@ -157,17 +168,15 @@
                         from a traditional warrior to a cyber security expert. Facing the modern challenge of mastering
                         the keyboard, our hero's journey is one of determination, skill, and swift adaptation.</p>
                 </div>
-                <div class="mt-14 grid grid-cols-3 max-xl:grid-cols-2 max-md:grid-cols-1 gap-x-7 gap-y-14">
-                    <template x-for="i in 6">
-                        <div class="w-full aspect-video bg-brand-pink rounded-3xl">
-
-                        </div>
+                <div class="mt-14 grid grid-cols-3 max-xl:grid-cols-2 max-md:grid-cols-1 gap-7">
+                    <template x-for="screenshot in alpine.screenshots">
+                        <img class="rounded-[20px]" x-bind:src="screenshot.img" x-bind:alt="screenshot.title">
                     </template>
                 </div>
             </section>
         </div>
-        <div class="px-14 py-16">
-            <section class="s bg-brand-lightpink rounded-[20px]">
+        <div class="px-14 py-16 max-sm:px-0">
+            <section class="s bg-brand-lightpink max-sm:rounded-none rounded-[20px]">
                 <div class="text-brand-dark1 text-center max-w-3xl mx-auto">
                     <h1 class="text-4xl font-bold">Press and Streamers</h1>
                     <p class="mt-5 font-mulish"> Are you a streamer, journalist or influencer? Download our press kit
@@ -175,8 +184,8 @@
                         to use to talk about Typing Ninja. If you'd like to chat, send us an email to
                         social@brainboostninja.com</p>
                     <div class="mt-10">
-                        <a class="mt-10 px-12 py-4 bg-brand-pink text-white rounded-2xl font-semibold"
-                            href="assets/files/downloadable.zip" download="downloadable content.zip">
+                        <a class="mt-10 max-xxxs:px-8 px-12 py-4 bg-brand-pink text-white rounded-2xl font-semibold"
+                            href="https://drive.google.com/uc?export=download&id=14CchG7fzJRlZXAUY-6fDI7XGuAM926vE" target="_blank">
                             <i class="fa-solid fa-scroll mr-2"></i>
                             <span>
                                 Download Press Kit
@@ -193,12 +202,12 @@
                     <p class="mt-5 font-mulish"> Using power-ups strategically can help you achieve higher scores and
                         progress further in the game.</p>
                 </div>
-                <div class="mt-14 flex flex-wrap justify-center gap-x-7 gap-y-14">
+                <div class="mt-14 flex max-md:flex-col md:flex-wrap justify-center gap-x-7 gap-y-14">
                     <template x-for="card in alpine.powerupCards">
                         <div
-                            class="relative w-[23rem] max-md:w-[80%] overflow-hidden text-center rounded-[20px] border border-brand-lightpink bg-white card-shadow">
-                            <img class="absolute top-2 left-2 z-10 w-28" x-bind:src="card.badge" x-bind:alt="card.name">
-                            <img loading="lazy" x-bind:src="card.gif"></img>
+                            class="relative lg:w-[23rem] max-md:w-full overflow-hidden text-center rounded-[20px] border border-brand-lightpink bg-white card-shadow">
+                            <img class="drop-shadow-md absolute top-2 left-2 z-10 w-[15%]" x-bind:src="card.badge" x-bind:alt="card.name">
+                            <img class="w-full" loading="lazy" x-bind:src="card.gif"></img>
                             <div class="px-10 py-7">
                                 <h2 class="text-[1.75rem] font-semibold" x-text="card.name"></h2>
                                 <p class="mt-6 font-mulish" x-text="card.description"></p>
@@ -268,15 +277,14 @@
             </section>
         </div>
         <div class="bg-brand-dark2">
-            <footer class="s flex justify-between items-center px-14 py-6 font-mulish text-white text-sm">
-                <p>© 2024 brainboostninja.com - All Rights Reserved.</p>
-                <div class="flex gap-4">
+            <footer class="s flex justify-between max-md:flex-col max-md:gap-3 items-center px-14 py-6 font-mulish text-white text-sm">
+                <p>© 2024 brainboostninja.com - All Rights Reserved.</p> 
+                <div class="flex gap-4 flex-wrap">
                     <template x-for="social in alpine.socials">
                         <a class="aspect-square w-8 h-8 flex justify-center items-center p-2 rounded-full bg-brand-dark1"
                             x-bind:href="social.url" target="_blank">
                             <i x-bind:class="social.icon"></i> <!-- Adjust `text-xl` as needed -->
                         </a>
-
                     </template>
                 </div>
             </footer>

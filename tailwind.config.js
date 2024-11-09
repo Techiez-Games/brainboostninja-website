@@ -26,6 +26,28 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         mulish: ["Mulish", "sans-serif"],
       },
+      screens: {
+        xxxs: "375px",
+        // => @media (min-width: 375px) { ... }
+        xxs: "425px",
+        // => @media (min-width: 425px) { ... }
+        xs: "500px",
+        // => @media (min-width: 500px) { ... }
+        sm: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1280px",
+        // => @media (min-width: 1280px) { ... }
+
+        "2xl": "1536px",
+        // => @media (min-width: 1536px) { ... }
+      },
       // fontSize: {
       //   xs: [".75rem", "1rem"], // 12px font size with 16px line height
       //   sm: [".875rem", "1.25rem"], // 14px font size with 20px line height

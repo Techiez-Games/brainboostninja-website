@@ -3,55 +3,62 @@ window.alpine = {
     {
       label: "Typing Ninja",
       url: "/home",
-      sectionId: "#s-game"
+      sectionId: "#s-game",
     },
     {
       label: "PowerUps",
       url: "/ninjaboosting",
-      sectionId: "#s-powerup"
+      sectionId: "#s-powerup",
     },
     {
       label: "Subscribe",
       url: "/ninjaboosting",
-      sectionId: "#s-subscribe"
+      sectionId: "#s-subscribe",
+    },
+  ],
+
+  screenshots: [
+    {
+      img: "/assets/images/screenshots/Image 1.png",
+      title: "Typing Ninja screenshot 1",
+    },
+    {
+      img: "/assets/images/screenshots/Image 2.png",
+      title: "Typing Ninja screenshot 2",
+    },
+    {
+      img: "/assets/images/screenshots/Image 3.png",
+      title: "Typing Ninja screenshot 3",
+    },
+    {
+      img: "/assets/images/screenshots/Image 4.png",
+      title: "Typing Ninja screenshot 4",
+    },
+    {
+      img: "/assets/images/screenshots/Image 5.png",
+      title: "Typing Ninja screenshot 5",
     },
   ],
 
   powerupCards: [
     {
-      name: "Fast building",
+      name: "Ice",
       description:
-        "Write benefits-focused, clear & concise feature descriptions. Emphasise the impact it has on the user's experience.",
-      badge: "/assets/images/powerups/ice.svg",
-      gif: "https://www.boomerangfu.com/images/maze-compressed-smaller.gif",
+        "Freezes falling words for a few seconds, giving you more time to type",
+      badge: "/assets/images/powerups/ice icon.png",
+      gif: "/assets/images/gifs/ice.gif",
     },
     {
-      name: "Fast building",
-      description:
-        "Tailor Anima's Landing Page UI Kit to your unique style and brand with customisable components, in no time!",
-      badge: "/assets/images/powerups/ice.svg",
-      gif: "https://www.boomerangfu.com/images/maze-compressed-smaller.gif",
+      name: "Air",
+      description: "Pushes words back up, slowing them down for a moment",
+      badge: "/assets/images/powerups/air icon.png",
+      gif: "/assets/images/gifs/air.gif",
     },
     {
-      name: "Fast building",
-      description:
-        "Tailor Anima's Landing Page UI Kit to your unique style and brand with customisable components, in no time!",
-      badge: "/assets/images/powerups/ice.svg",
-      gif: "https://www.boomerangfu.com/images/maze-compressed-smaller.gif",
-    },
-    {
-      name: "Fast building",
-      description:
-        "Tailor Anima's Landing Page UI Kit to your unique style and brand with customisable components, in no time!",
-      badge: "/assets/images/powerups/ice.svg",
-      gif: "https://www.boomerangfu.com/images/maze-compressed-smaller.gif",
-    },
-    {
-      name: "Fast building",
-      description:
-        "Tailor Anima's Landing Page UI Kit to your unique style and brand with customisable components, in no time!",
-      badge: "/assets/images/powerups/ice.svg",
-      gif: "https://www.boomerangfu.com/images/maze-compressed-smaller.gif",
+      name: "Bomb",
+      description: "Destroys some words on the screen, clearing the way",
+      badge: "/assets/images/powerups/bom icon.png",
+      gif: "/assets/images/gifs/bom.gif",
     },
   ],
 
